@@ -4,51 +4,52 @@
 
 ## Overview
 
-RecycleRadar is a responsive browser application for exploring recycling facilities, filtering by accepted materials and radius, and learning disposal guidance.
+RecycleRadar demonstrates a browser workflow for searching and filtering recycling facilities by name, material type, and a predefined distance value.
 
-**Current implementation:** the facility catalogue and distances are simulated data. The UI demonstrates the product flow but is not backed by a live municipal or maps database.
+The current application uses **sample data only**. It does not connect to a live municipal recycling database, maps provider, or real location service.
 
 ## Features
 
 - Search facilities by name
-- Filter by material type and radius
-- Facility cards with hours, contact details, accepted materials, amenities, and ratings
-- Responsive layout
-- Simulated location fallback
-- Recycling education content
+- Filter by material type
+- Filter by a predefined search radius
+- Display hours, contact details, accepted materials, amenities, and sample ratings
+- Facility detail panel
+- Responsive browser layout
+- Recycling guidance and quick tips
+- Fixed simulated New York City location display
 
-## Tech stack
+## Data and limitations
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Browser APIs
+The facility records contain sample names, addresses, phone numbers, coordinates, distances, ratings, hours, and amenities.
+
+The displayed distance is taken directly from each sample record; it is **not calculated from the user's actual location**.
+
+The map area is currently a UI placeholder rather than a live interactive map.
 
 ## Run locally
 
-Open `RecycleRadar.html` in a modern browser.
-
-For more consistent behavior, serve the directory:
+Open `RecycleRadar.html` in a modern browser, or serve the directory:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/RecycleRadar.html`.
+Then open:
 
-## Data and limitations
+```text
+http://localhost:8000/RecycleRadar.html
+```
 
-The current version is a UI/logic prototype. Facility names, coordinates, distances, ratings, and contact details are sample data and should not be treated as real-world service information.
+## Roadmap
 
-## Future work
-
-- Live facility data source
-- Real distance calculation
-- Map provider integration
-- Server-side search and caching
-- Formal accessibility audit
-- User accounts and saved locations
+- Live recycling-facility data
+- Geocoded distance calculation
+- Real map integration
+- Backend search and caching
+- Accessibility testing and refinement
+- Saved locations/user accounts
 
 ## License
 
-GPL-3.0
+See [LICENSE](LICENSE).
