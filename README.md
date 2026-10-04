@@ -1,180 +1,54 @@
-# `RecycleRadar`
+# RecycleRadar
 
->**A Location-Based Recycling Center Discovery Platform**
+> Recycling-center discovery front-end prototype using simulated facility data.
 
-## Quick Overview
+## Overview
 
-`RecycleRadar` is a responsive front-end web application that helps users find nearby recycling facilities and understand accepted materials through an intuitive, geolocation-based interface.
+RecycleRadar is a responsive browser application for exploring recycling facilities, filtering by accepted materials and radius, and learning disposal guidance.
 
-## Key Features
+**Current implementation:** the facility catalogue and distances are simulated data. The UI demonstrates the product flow but is not backed by a live municipal or maps database.
 
-- **Geolocation-Based Discovery** - Automatically detects user location and shows nearby recycling centers
-- **Interactive Map Visualization** - Visual display of all recycling facilities in the area
-- **Advanced Search & Filtering** - Filter by material type (plastic, metal, paper, glass, electronics, organic), location radius, and operating hours
-- **Detailed Facility Information** - Complete address, phone number, hours, accepted materials, amenities, and user ratings
-- **Environmental Education** - Integrated recycling tips and guidelines for proper material disposal
-- **Fully Responsive Design** - Seamless experience on desktop, tablet, and mobile devices
-- **Data Persistence** - `LocalStorage` support for saving user search history and preferences
-- **Accessibility First** - WCAG 2.1 AA compliance with keyboard navigation and screen reader support
+## Features
 
-## Technologies Used
+- Search facilities by name
+- Filter by material type and radius
+- Facility cards with hours, contact details, accepted materials, amenities, and ratings
+- Responsive layout
+- Simulated location fallback
+- Recycling education content
 
-- **HTML5** - Semantic structure and form handling
-- **CSS3** - Responsive design with Flexbox/Grid layouts
-- **JavaScript (ES6+)** - Dynamic filtering, geolocation API, DOM manipulation
-- **Geolocation API** - Browser-based location detection with fallback options
-- **`LocalStorage`** - Client-side data persistence without backend requirements
+## Tech stack
 
-## Problem Solved
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Browser APIs
 
-- ✗ Users struggle to find convenient recycling facilities
-- ✗ Information is fragmented across multiple platforms
-- ✗ Unclear which materials each facility accepts
-- ✗ No centralized discovery mechanism
+## Run locally
 
-**`RecycleRadar` provides a unified, user-friendly solution for sustainable waste management!**
+Open `RecycleRadar.html` in a modern browser.
 
-## Learning Outcomes Demonstrated
+For more consistent behavior, serve the directory:
 
-	1. Semantic HTML5 and accessibility practices  
-	2. Responsive CSS3 design (mobile-first approach)  
-	3. JavaScript event handling and DOM manipulation  
-	4. Geolocation API integration  
-	5. Algorithm optimization for filtering  
-	6. WCAG accessibility compliance  
-
-## Project Structure
-
-```
-RecycleRadar/
-├── RecycleRadar.html      # Main application
-├── RecycleRadar-PPT.html  # Slides for presentation
-├── Report.pdf             # Comprehensive technical report
-└── README.md              # Project documentation
+```bash
+python -m http.server 8000
 ```
 
-## How to Run
+Then open `http://localhost:8000/RecycleRadar.html`.
 
-1. **Open the Application:**
-   ```bash
-   # Simply open in any modern browser
-   RecycleRadar.html
-   ```
+## Data and limitations
 
-2. **View the Presentation:**
-   ```bash
-   # Open in browser and use arrow keys to navigate
-   RecycleRadar-PPT.html
-   ```
+The current version is a UI/logic prototype. Facility names, coordinates, distances, ratings, and contact details are sample data and should not be treated as real-world service information.
 
-3. **Read the Report:**
-   ```bash
-   # Open in browser and use arrow keys to navigate
-   Report.pdf
-   ```
+## Future work
 
-## Features in Detail
-
-### Smart Search System
-- Search by facility name or location
-- Filter by specific material types
-- Set search radius (1-50 km)
-- Filter by operating hours
-- Real-time results display
-
-### Facility Information Display
-Each facility card shows:
-- Facility name and exact address
-- Distance from user location
-- Operating hours
-- List of accepted materials
-- Available amenities (24/7, free service, parking)
-- User ratings and review counts
-- Contact phone number
-
-### Educational Content
-- Material preparation guidelines
-- Proper sorting methodologies
-- Environmental impact information
-- Recycling best practices
-
-## Design Highlights
-
-- Modern gradient background (purple to blue)
-- Clean card-based layout
-- Color-coded material tags
-- Interactive map container
-- Touch-friendly interface for mobile
-- Smooth animations and transitions
-- Comprehensive search controls sidebar
-
-## Accessibility Features
-
-- WCAG 2.1 AA compliant
-- Keyboard navigation support
-- ARIA labels on interactive elements
-- Sufficient color contrast ratios
-- Semantic HTML structure
-- Alternative text for visual elements
-
-## Performance
-
-- Client-side only (no backend needed)
-- Fast load times
-- Optimized filtering algorithms
-- Smooth UI interactions
-- `LocalStorage` for instant data retrieval
-
-## Future Enhancement Opportunities
-
-- Backend integration for real-time facility data
-- User accounts with cross-device sync
-- Mobile app development (React Native/Flutter)
-- AI-powered recycling education
-- Integration with municipal waste systems
-- Gamification features for recycling participation
-
-## Student Information
-
-**Course:** ACSE04 - Front-End Web Development  
-**Student:** Amal Bijoy  
-**Roll Number:** 25951A6635  
-**Section:** A  
-**Institution:** Institute of Aeronautical Engineering, Hyderabad  
-**Explanation video link:** [Drive](https://drive.google.com/file/d/161ndyFdrKidwIykuOQDR5qJg39PCvxi9/view?usp=sharing)
-
-## Technologies & Concepts Demonstrated
-
-### Core Concepts
-- Client-side architecture (MVC pattern)
-- Event-driven programming
-- Responsive design methodology
-- Progressive enhancement
-- Accessibility-first design
-
-### Advanced Techniques
-- Geolocation API usage
-- Asynchronous operations (Promises)
-- Array methods (map, filter, reduce)
-- DOM manipulation and updates
-- CSS Grid and Flexbox layouts
-- Media queries for responsiveness
-
-## Testing & Quality Assurance
-
-- Tested on Chrome, Firefox, Safari, Edge
-- Verified on desktop, tablet, mobile
-- WCAG 2.1 AA accessibility verified
-- All features functional and tested
-- Responsive design confirmed
+- Live facility data source
+- Real distance calculation
+- Map provider integration
+- Server-side search and caching
+- Formal accessibility audit
+- User accounts and saved locations
 
 ## License
 
-
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
-
-This project is part of ACSE04 course work at Institute of Aeronautical Engineering, Hyderabad.
-
----
-
-**`RecycleRadar`: Making Recycling Accessible to Everyone!**
+GPL-3.0
